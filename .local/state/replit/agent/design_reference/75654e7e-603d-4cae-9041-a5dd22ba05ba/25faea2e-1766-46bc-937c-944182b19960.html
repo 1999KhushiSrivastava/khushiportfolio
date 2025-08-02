@@ -1,0 +1,963 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi Srivastava - Backend Developer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Khushi Srivastava, Backend Developer specializing in Node.js, AWS, and cloud-based solutions">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="font-inter bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-bold text-xl text-primary-600 dark:text-primary-400">
+                    Khushi Srivastava
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#home" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400">Home</a>
+                <a href="#about" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400">About</a>
+                <a href="#skills" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400">Skills</a>
+                <a href="#experience" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400">Experience</a>
+                <a href="#projects" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400">Projects</a>
+                <a href="#contact" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <p class="text-primary-600 dark:text-primary-400 font-medium">Hello, I'm</p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                            Khushi <span class="text-primary-600 dark:text-primary-400">Srivastava</span>
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-slate-600 dark:text-slate-300">
+                            Backend Developer & Cloud Solutions Architect
+                        </h2>
+                    </div>
+                    
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Passionate Backend Developer with expertise in Node.js, AWS cloud services, and scalable system architecture. 
+                        Currently building enterprise-grade solutions at e-Mag Solutions, focusing on healthcare data processing and secure API development.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Get In Touch
+                        </a>
+                        <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-600 hover:text-white dark:hover:text-white rounded-lg font-medium transition-colors">
+                            <i class="fas fa-download mr-2"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-mock="true">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-mock="true">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="mailto:rimghim220@gmail.com" class="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative w-80 h-80 mx-auto">
+                        <!-- Professional headshot placeholder with modern gradient background -->
+                        <div class="w-full h-full rounded-3xl bg-gradient-to-br from-primary-500 via-indigo-500 to-purple-600 p-1">
+                            <div class="w-full h-full rounded-3xl bg-white dark:bg-slate-800 flex items-center justify-center">
+                                <div class="text-center space-y-4">
+                                    <div class="w-32 h-32 mx-auto bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-4xl text-slate-400 dark:text-slate-500"></i>
+                                    </div>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400" data-mock="true">Professional Photo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary-500/20 rounded-full animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-indigo-500/20 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    Dedicated Backend Developer with a passion for creating robust, scalable solutions
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold mb-4">My Journey</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        With a Master's in Computer Application from Dr. Ram Manohar Lohia Avadh University, I've specialized in backend development, 
+                        focusing on Node.js and AWS cloud technologies. My experience spans from developing secure e-commerce platforms to 
+                        architecting enterprise-grade healthcare solutions.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Currently at e-Mag Solutions, I lead cloud migration projects and develop RESTful APIs that serve thousands of concurrent users. 
+                        I'm passionate about writing clean, efficient code and implementing robust security measures for sensitive data handling.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                            <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">100K+</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Medical Records Processed</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                            <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">1,000+</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Concurrent Users Supported</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                            <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">95%</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Code Coverage Achieved</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                            <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">60%</div>
+                            <div class="text-sm text-slate-600 dark:text-slate-300">Cost Reduction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold mb-4">What I Do Best</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-server text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Backend Development</h4>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm">
+                                    Building scalable APIs and microservices using Node.js, Express.js, and modern JavaScript frameworks
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cloud text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Cloud Architecture</h4>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm">
+                                    Designing and implementing AWS cloud solutions including S3, Lambda, Aurora, and API Gateway
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-database text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Database Management</h4>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm">
+                                    Expert in MongoDB, MySQL, PostgreSQL, and Redis for efficient data storage and retrieval
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Security & Compliance</h4>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm">
+                                    Implementing robust security measures and ensuring HIPAA compliance for sensitive data
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    A comprehensive toolkit for building modern, scalable backend solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Programming Languages -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Languages</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-primary-600 dark:text-primary-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Python</span>
+                                <span class="text-primary-600 dark:text-primary-400">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frameworks & Tools -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Frameworks</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Node.js</span>
+                                <span class="text-primary-600 dark:text-primary-400">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Express.js</span>
+                                <span class="text-primary-600 dark:text-primary-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud & DevOps -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Cloud & DevOps</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">AWS</span>
+                                <span class="text-primary-600 dark:text-primary-400">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Git/GitHub</span>
+                                <span class="text-primary-600 dark:text-primary-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Databases -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center">Databases</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">MongoDB</span>
+                                <span class="text-primary-600 dark:text-primary-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">MySQL</span>
+                                <span class="text-primary-600 dark:text-primary-400">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="skill-bar bg-primary-600 h-2 rounded-full" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AWS Services -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-center mb-8">AWS Services Expertise</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+                        <i class="fab fa-aws text-3xl text-orange-500 mb-2"></i>
+                        <div class="font-medium">S3</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-bolt text-3xl text-yellow-500 mb-2"></i>
+                        <div class="font-medium">Lambda</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-database text-3xl text-blue-500 mb-2"></i>
+                        <div class="font-medium">Aurora</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-network-wired text-3xl text-green-500 mb-2"></i>
+                        <div class="font-medium">API Gateway</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-users text-3xl text-purple-500 mb-2"></i>
+                        <div class="font-medium">Cognito</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-tachometer-alt text-3xl text-red-500 mb-2"></i>
+                        <div class="font-medium">Redis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional Experience</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    Building enterprise-grade solutions and leading cloud transformation initiatives
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Current Position -->
+                <div class="relative bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="absolute top-8 left-8 w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                    <div class="ml-12">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Software Developer (Backend - NodeJS)</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">e-Mag Solutions</p>
+                            </div>
+                            <div class="text-slate-600 dark:text-slate-300 font-medium">
+                                Jan 2023 - Present
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-cloud-upload-alt text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    <strong>Cloud Migration Leadership:</strong> Led end-to-end AWS cloud migration (S3, Lambda, Aurora DB), 
+                                    transforming legacy systems into an automated data pipeline processing 100K+ medical records with 50% improved efficiency.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-cogs text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    <strong>API Architecture:</strong> Architected enterprise-grade RESTful API infrastructure using AWS API Gateway 
+                                    and Cognito authentication, delivering secure microservices platform supporting 1,000+ concurrent healthcare professionals.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-chart-line text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    <strong>Cost Optimization:</strong> Spearheaded comprehensive data modeling strategy and ETL automation, 
+                                    resulting in 60% operational cost reduction while maintaining strict data integrity and HIPAA compliance.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-shield-alt text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    <strong>Security Implementation:</strong> Implemented robust security measures throughout the architecture, 
+                                    ensuring end-to-end encryption, role-based access control, and continuous compliance monitoring.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-vial text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    <strong>Quality Assurance:</strong> Architected comprehensive testing strategy encompassing unit, integration, 
+                                    and penetration testing, achieving 95% code coverage with automated quality gates.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">AWS</span>
+                            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">API Gateway</span>
+                            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">Lambda</span>
+                            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">Aurora RDS</span>
+                            <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">HIPAA Compliance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Experience -->
+                <div class="relative bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="absolute top-8 left-8 w-4 h-4 bg-blue-500 rounded-full"></div>
+                    <div class="ml-12">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Backend Developer Trainee</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">FunctionUp</p>
+                            </div>
+                            <div class="text-slate-600 dark:text-slate-300 font-medium">
+                                July 2022 - Dec 2022
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-graduation-cap text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    Intensive training in Backend Development with Node.js, Express.js, MongoDB, Git, and GitHub, 
+                                    developing efficient and scalable applications.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-rocket text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    Gained proficiency in AWS S3 integration, Redis, and caching fundamentals to optimize application performance.
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-trophy text-primary-600 dark:text-primary-400 mt-1"></i>
+                                <p class="text-slate-600 dark:text-slate-300">
+                                    Actively participated in coding competitions on HackerRank, Codezinger, and LeetCode platforms.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Express.js</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">MongoDB</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">AWS S3</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    A showcase of my technical expertise through real-world applications
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- E-Commerce Project -->
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 p-6 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-5xl text-white"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">Featured</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">E-Commerce Shopping Cart</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Secure e-commerce platform with user authentication, product catalog management, 
+                            interactive shopping cart, and automated order processing. Improved transaction efficiency by 30%.
+                        </p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-users text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">10,000+ Active Users</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-shield-alt text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">Advanced Encryption Protocols</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-chart-line text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">30% Efficiency Improvement</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">AWS S3</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg text-center transition-colors text-sm font-medium" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="flex-1 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white py-2 px-4 rounded-lg text-center transition-colors text-sm font-medium" data-mock="true">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Management System -->
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative h-48 bg-gradient-to-br from-green-500 to-blue-600 p-6 flex items-center justify-center">
+                        <i class="fas fa-book text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Book Management System</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Secure backend for a Goodreads-like platform with RESTful APIs for user management, 
+                            book cataloging, and reviews. Features JWT authentication and optimized CRUD operations.
+                        </p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-key text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">JWT Authentication</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-database text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">Optimized CRUD Operations</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-user-shield text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">Role Management System</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">AWS S3</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg text-center transition-colors text-sm font-medium" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="flex-1 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white py-2 px-4 rounded-lg text-center transition-colors text-sm font-medium" data-mock="true">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open to Intern Project -->
+                <div class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-500 to-pink-600 p-6 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Open to Intern Platform</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                            Backend for college internship platform with APIs for managing colleges and interns. 
+                            Features AWS S3 integration for secure logo storage and optimized media handling.
+                        </p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-university text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">College Management APIs</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-cloud text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">AWS S3 Integration</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-tachometer-alt text-primary-600 dark:text-primary-400"></i>
+                                <span class="text-slate-600 dark:text-slate-300">Optimized Performance</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs">AWS S3</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg text-center transition-colors text-sm font-medium" data-mock="true">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="#" class="flex-1 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white py-2 px-4 rounded-lg text-center transition-colors text-sm font-medium" data-mock="true">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Education</h2>
+                    <div class="space-y-6">
+                        <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-graduation-cap text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-semibold mb-2">Master of Computer Application (MCA)</h3>
+                                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-2">Dr. Ram Manohar Lohia Avadh University, Ayodhya</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-slate-600 dark:text-slate-300">2020 - 2022</span>
+                                        <span class="bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm font-medium">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Certifications</h2>
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-certificate text-green-600 dark:text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">HackerRank Certifications</h3>
+                                    <p class="text-slate-600 dark:text-slate-300 text-sm">Node.js (Basic), JavaScript (Basic & Intermediate)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-certificate text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Scaler Certification</h3>
+                                    <p class="text-slate-600 dark:text-slate-300 text-sm">Node.js Development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                    Ready to discuss your next project or explore opportunities? Let's connect!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-semibold mb-6">Let's Work Together</h3>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        I'm always interested in hearing about new opportunities, exciting projects, 
+                        and connecting with fellow developers. Whether you're looking for a backend developer 
+                        to join your team or need consultation on your next cloud migration, I'd love to hear from you.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:rimghim220@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline">
+                                    rimghim220@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Phone</p>
+                                <a href="tel:+917275563192" class="text-primary-600 dark:text-primary-400 hover:underline">
+                                    +91-7275563192
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-linkedin text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">LinkedIn</p>
+                                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline" data-mock="true">
+                                    Connect with me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg">
+                    <form class="space-y-6" data-implementation="Should handle form submission and validation">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
+                                       placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
+                                       placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   class="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
+                                   placeholder="What's this about?">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
+                                      placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 px-6 rounded-lg font-medium transition-colors">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Khushi Srivastava</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Backend Developer passionate about building scalable solutions 
+                        and cloud architecture. Always eager to take on new challenges.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#about" class="block hover:text-primary-400 transition-colors">About</a>
+                        <a href="#skills" class="block hover:text-primary-400 transition-colors">Skills</a>
+                        <a href="#experience" class="block hover:text-primary-400 transition-colors">Experience</a>
+                        <a href="#projects" class="block hover:text-primary-400 transition-colors">Projects</a>
+                        <a href="#contact" class="block hover:text-primary-400 transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors" data-mock="true">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors" data-mock="true">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:rimghim220@gmail.com" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center">
+                <p class="text-slate-400">
+                    © 2024 Khushi Srivastava. All rights reserved. Built with passion and modern web technologies.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        (function() {
+            // Theme Toggle Functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to light mode
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            html.classList.toggle('dark', currentTheme === 'dark');
+            
+            themeToggle.addEventListener('click', function() {
+                html.classList.toggle('dark');
+                const isDark = html.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+
+            // Mobile Menu Functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth Scrolling for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Skill Bar Animation on Scroll
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const animateSkillBars = () => {
+                skillBars.forEach(bar => {
+                    const rect = bar.getBoundingClientRect();
+                    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                    
+                    if (isVisible && !bar.classList.contains('animated')) {
+                        bar.classList.add('animated');
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.transition = 'width 2s ease-out';
+                            bar.style.width = width;
+                        }, 100);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateSkillBars);
+            animateSkillBars(); // Initial check
+
+            // Contact Form Handling
+            const contactForm = document.querySelector('form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement form submission logic
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                this.reset();
+            });
+
+            // Add loading states and animations
+            window.addEventListener('load', function() {
+                document.body.classList.add('loaded');
+            });
+        })();
+    </script>
+</body>
+</html>
