@@ -127,7 +127,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg">
+          <div className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 shadow-2xl border border-slate-200/50 dark:border-slate-600/50">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>

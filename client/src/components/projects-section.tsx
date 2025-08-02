@@ -17,16 +17,16 @@ export function ProjectsSection() {
       featured: true,
     },
     {
-      title: "Book Management System",
-      description: "Secure backend for a Goodreads-like platform with RESTful APIs for user management, book cataloging, and reviews. Features JWT authentication and optimized CRUD operations.",
+      title: "Comprehensive Author and Book Management System",
+      description: "Designed and deployed a scalable RESTful API using TypeScript, Node.js, Express, and MongoDB, enabling full CRUD operations for authors and books; improved data integrity and security with TypeScript interfaces and Mongoose schemas, reducing data errors by 40% and accelerating integration by 30%.",
       icon: Book,
       gradient: "from-green-500 to-blue-600",
       features: [
-        { icon: Key, text: "JWT Authentication" },
-        { icon: Database, text: "Optimized CRUD Operations" },
-        { icon: UserCheck, text: "Role Management System" },
+        { icon: Key, text: "TypeScript Interfaces" },
+        { icon: Database, text: "Mongoose Schemas" },
+        { icon: UserCheck, text: "40% Error Reduction" },
       ],
-      technologies: ["JavaScript", "Node.js", "MongoDB", "AWS S3"],
+      technologies: ["TypeScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "REST API", "MVC Architecture"],
       featured: false,
     },
     {
@@ -60,7 +60,7 @@ export function ProjectsSection() {
             return (
               <div
                 key={index}
-                className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift"
+                className="group bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl overflow-hidden shadow-lg card-hover border border-slate-200/50 dark:border-slate-600/50"
               >
                 <div className={`relative h-48 bg-gradient-to-br ${project.gradient} p-6 flex items-center justify-center`}>
                   <Icon className="text-5xl text-white" />

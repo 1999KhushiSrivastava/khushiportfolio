@@ -10,9 +10,9 @@ import {
 
 export function ExperienceSection() {
   const currentExperience = {
-    title: "Software Developer (Backend - NodeJS)",
+    title: "Software Developer",
     company: "e-Mag Solutions",
-    period: "Jan 2023 - Present",
+    period: "Jan 2023 - Feb 2025",
     isActive: true,
     achievements: [
       {
@@ -36,7 +36,7 @@ export function ExperienceSection() {
         description: "Implemented robust security measures throughout the architecture, ensuring end-to-end encryption, role-based access control, and continuous compliance monitoring."
       }
     ],
-    technologies: ["Node.js", "AWS", "API Gateway", "Lambda", "Aurora RDS", "HIPAA Compliance"]
+    technologies: ["Node.js", "TypeScript", "AWS", "API Gateway", "Lambda", "Aurora RDS", "HIPAA Compliance"]
   };
 
   const trainingExperience = {
@@ -48,24 +48,24 @@ export function ExperienceSection() {
       {
         icon: GraduationCap,
         title: "Intensive Training",
-        description: "Intensive training in Backend Development with Node.js, Express.js, MongoDB, Git, and GitHub, developing efficient and scalable applications."
+        description: "Trained in backend development with hands-on experience building scalable applications using Node.js, Express.js, TypeScript, and MongoDB; skilled in version control, collaboration, and code management using Git and GitHub."
       },
       {
         icon: Rocket,
         title: "Performance Optimization",
-        description: "Gained proficiency in AWS S3 integration, Redis, and caching fundamentals to optimize application performance."
+        description: "Proficient in integrating AWS S3 for secure storage solutions, and experienced with Redis and caching strategies to enhance application speed, scalability, and performance."
       },
       {
         icon: Trophy,
-        title: "Competitive Programming",
-        description: "Actively participated in coding competitions on HackerRank, Codezinger, and LeetCode platforms."
+        title: "API Development",
+        description: "Experienced in designing and implementing RESTful APIs with secure authentication (JWT, OAuth), tailored for diverse use cases including user management, data processing, and third-party integrations."
       }
     ],
-    technologies: ["Node.js", "Express.js", "MongoDB", "AWS S3", "Redis"]
+    technologies: ["Node.js", "Express.js", "TypeScript", "MongoDB", "AWS S3", "Redis", "JWT", "OAuth"]
   };
 
   const ExperienceCard = ({ experience }: { experience: typeof currentExperience }) => (
-    <div className="relative bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 hover:shadow-lg transition-shadow hover-lift">
+    <div className="relative bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 shadow-lg card-hover border border-slate-200/50 dark:border-slate-600/50">
       <div className={`absolute top-8 left-8 w-4 h-4 rounded-full ${
         experience.isActive ? 'bg-green-500 animate-pulse' : 'bg-blue-500'
       }`}></div>

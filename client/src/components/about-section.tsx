@@ -51,23 +51,22 @@ export function AboutSection() {
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
               With a Master's in Computer Application from Dr. Ram Manohar Lohia
-              Avadh University, I've specialized in backend development,
-              focusing on Node.js and AWS cloud technologies. My experience
-              spans from developing secure e-commerce platforms to architecting
-              enterprise-grade healthcare solutions.
+              Avadh University, I've specialized in backend development with 2+ years
+              of experience in building scalable APIs and cloud-native solutions using 
+              Node.js, Express.js, TypeScript, MongoDB, and AWS.
             </p>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              Currently at e-Mag Solutions, I lead cloud migration projects and
-              develop RESTful APIs that serve thousands of concurrent users. I'm
-              passionate about writing clean, efficient code and implementing
-              robust security measures for sensitive data handling.
+              At e-Mag Solutions, I lead cloud migration projects and develop RESTful APIs 
+              that serve thousands of concurrent users. I'm passionate about implementing 
+              secure authentication systems with JWT and OAuth, and building robust, 
+              high-performance applications with strict data integrity standards.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 bg-slate-50 dark:bg-slate-700 rounded-lg hover-lift"
+                  className="text-center p-4 bg-gradient-to-br from-emerald-50 to-cyan-50 dark:from-emerald-900/20 dark:to-cyan-900/20 rounded-lg card-hover border border-emerald-200/50 dark:border-emerald-700/50"
                 >
                   <div className="text-2xl font-bold text-primary">{stat.value}</div>
                   <div className="text-sm text-slate-600 dark:text-slate-300">

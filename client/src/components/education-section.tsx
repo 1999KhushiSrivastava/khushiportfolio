@@ -29,7 +29,7 @@ export function EducationSection() {
           <div>
             <h2 className="text-3xl font-bold mb-8">Education</h2>
             <div className="space-y-6">
-              <div className="bg-slate-50 dark:bg-slate-700 rounded-xl p-6 hover:shadow-lg transition-shadow hover-lift">
+              <div className="bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 rounded-xl p-6 shadow-lg card-hover border border-violet-200/50 dark:border-violet-700/50">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <GraduationCap className="h-6 w-6 text-primary" />
@@ -60,7 +60,7 @@ export function EducationSection() {
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="bg-slate-50 dark:bg-slate-700 rounded-xl p-6 hover:shadow-lg transition-shadow hover-lift"
+                  className="bg-gradient-to-br from-rose-50 to-amber-50 dark:from-rose-900/20 dark:to-amber-900/20 rounded-xl p-6 shadow-lg card-hover border border-rose-200/50 dark:border-rose-700/50"
                 >
                   <div className="flex items-center space-x-4">
                     <div
