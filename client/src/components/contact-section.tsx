@@ -78,7 +78,7 @@ export function ContactSection() {
       icon: Linkedin,
       title: "LinkedIn",
       value: "Connect with me",
-      href: "#",
+      href: "https://www.linkedin.com/in/khushi-srivastava-07248421a/",
     },
   ];
 

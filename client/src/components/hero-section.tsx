@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Download, Linkedin, Github, User } from "lucide-react";
-import resumePdf from "@assets/khushi_resume_4_1754129897739.pdf";
+import resumePdf from "@assets/khushi_resume_5_1754132012136.pdf";
+import profileImage from "@assets/naukri_img_khshi_1754131307475.jpg";
 
 export function HeroSection() {
   const handleDownloadResume = () => {
@@ -36,10 +37,9 @@ export function HeroSection() {
             </div>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              Backend Developer with 2+ years of experience in building scalable APIs and 
-              cloud-native solutions using Node.js, Express.js, TypeScript, MongoDB, and AWS. 
-              Proven track record in AWS cloud migration, RESTful API development, and secure 
-              data handling for high-performance applications.
+              Backend Developer with 2+ years' experience building scalable APIs and cloud 
+              solutions using Node.js, TypeScript, Express.js, and AWS. Skilled in RESTful APIs, 
+              cloud migration, and secure backend systems.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -62,20 +62,24 @@ export function HeroSection() {
 
             <div className="flex space-x-6">
               <a
-                href="#"
-                className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                href="https://www.linkedin.com/in/khushi-srivastava-07248421a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="#"
-                className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                href="https://github.com/khushi-srivastava"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
               >
                 <Github className="h-6 w-6" />
               </a>
               <a
                 href="mailto:rimghim220@gmail.com"
-                className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                className="text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
                 <Mail className="h-6 w-6" />
               </a>
@@ -85,10 +89,14 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative w-80 h-80 mx-auto">
               <div className="w-full h-full rounded-3xl gradient-bg p-1 animate-float">
-                <div className="w-full h-full rounded-3xl bg-white dark:bg-slate-800 flex items-center justify-center">
+                <div className="w-full h-full rounded-3xl bg-white dark:bg-slate-800 flex items-center justify-center overflow-hidden">
                   <div className="text-center space-y-4">
-                    <div className="w-32 h-32 mx-auto bg-gradient-to-br from-emerald-100 to-cyan-100 dark:from-emerald-900 dark:to-cyan-900 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-700 shadow-2xl">
-                      <User className="h-16 w-16 text-emerald-600 dark:text-emerald-400" />
+                    <div className="w-32 h-32 mx-auto rounded-full border-4 border-white dark:border-slate-700 shadow-2xl overflow-hidden">
+                      <img 
+                        src={profileImage} 
+                        alt="Khushi Srivastava" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
                       Khushi Srivastava

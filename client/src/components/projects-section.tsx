@@ -5,9 +5,9 @@ export function ProjectsSection() {
   const projects = [
     {
       title: "E-Commerce Shopping Cart",
-      description: "Secure e-commerce platform with user authentication, product catalog management, interactive shopping cart, and automated order processing. Improved transaction efficiency by 30%.",
+      description: "Developed and deployed a secure e-commerce platform, integrating user authentication, product catalog management, interactive shopping cart, and automated order processing, improving transaction efficiency by 30% and securing sensitive data for over 10,000 active users through advanced encryption protocols.",
       icon: ShoppingCart,
-      gradient: "from-blue-500 to-purple-600",
+      gradient: "from-emerald-500 to-teal-600",
       features: [
         { icon: Users, text: "10,000+ Active Users" },
         { icon: Shield, text: "Advanced Encryption Protocols" },
@@ -20,7 +20,7 @@ export function ProjectsSection() {
       title: "Comprehensive Author and Book Management System",
       description: "Designed and deployed a scalable RESTful API using TypeScript, Node.js, Express, and MongoDB, enabling full CRUD operations for authors and books; improved data integrity and security with TypeScript interfaces and Mongoose schemas, reducing data errors by 40% and accelerating integration by 30%.",
       icon: Book,
-      gradient: "from-green-500 to-blue-600",
+      gradient: "from-violet-500 to-purple-600",
       features: [
         { icon: Key, text: "TypeScript Interfaces" },
         { icon: Database, text: "Mongoose Schemas" },
@@ -31,9 +31,9 @@ export function ProjectsSection() {
     },
     {
       title: "Open to Intern Platform",
-      description: "Backend for college internship platform with APIs for managing colleges and interns. Features AWS S3 integration for secure logo storage and optimized media handling.",
+      description: "Developed the backend for a college internship platform, creating APIs for managing colleges and interns. Integrated AWS S3 for secure and efficient storage and retrieval of college logos, ensuring seamless access to visual assets. Optimized performance and scalability while maintaining a user-centric approach for media handling.",
       icon: GraduationCap,
-      gradient: "from-purple-500 to-pink-600",
+      gradient: "from-rose-500 to-pink-600",
       features: [
         { icon: University, text: "College Management APIs" },
         { icon: Cloud, text: "AWS S3 Integration" },
@@ -62,7 +62,7 @@ export function ProjectsSection() {
                 key={index}
                 className="group bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl overflow-hidden shadow-lg card-hover border border-slate-200/50 dark:border-slate-600/50"
               >
-                <div className={`relative h-48 bg-gradient-to-br ${project.gradient} p-6 flex items-center justify-center`}>
+                <div className={`relative h-48 bg-gradient-to-br ${project.gradient} p-6 flex items-center justify-center overflow-hidden`}>
                   <Icon className="text-5xl text-white" />
                   {project.featured && (
                     <div className="absolute top-4 right-4">
@@ -109,6 +109,7 @@ export function ProjectsSection() {
                       variant="default"
                       size="sm"
                       className="flex-1 bg-primary hover:bg-primary/90"
+                      onClick={() => window.open("#", "_blank")}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
@@ -117,6 +118,7 @@ export function ProjectsSection() {
                       variant="outline"
                       size="sm"
                       className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      onClick={() => window.open("https://github.com/khushi-srivastava", "_blank")}
                     >
                       <Github className="mr-2 h-4 w-4" />
                       GitHub

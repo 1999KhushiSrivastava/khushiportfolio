@@ -47,20 +47,24 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-4">Connect</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                href="https://www.linkedin.com/in/khushi-srivastava-07248421a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                href="https://github.com/khushi-srivastava"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 href="mailto:rimghim220@gmail.com"
-                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors"
               >
                 <Mail className="h-5 w-5" />
               </a>

@@ -51,9 +51,9 @@ export function AboutSection() {
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
               With a Master's in Computer Application from Dr. Ram Manohar Lohia
-              Avadh University, I've specialized in backend development with 2+ years
-              of experience in building scalable APIs and cloud-native solutions using 
-              Node.js, Express.js, TypeScript, MongoDB, and AWS.
+              Avadh University, I have 2+ years' experience building scalable APIs and cloud 
+              solutions using Node.js, TypeScript, Express.js, and AWS. Skilled in RESTful APIs, 
+              cloud migration, and secure backend systems.
             </p>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
               At e-Mag Solutions, I lead cloud migration projects and develop RESTful APIs 

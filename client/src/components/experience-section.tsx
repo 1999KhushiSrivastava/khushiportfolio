@@ -18,7 +18,7 @@ export function ExperienceSection() {
       {
         icon: CloudUpload,
         title: "Cloud Migration Leadership",
-        description: "Led end-to-end AWS cloud migration (S3, Lambda, Aurora DB), transforming legacy systems into an automated data pipeline processing 100K+ medical records with 50% improved efficiency."
+        description: "Led end-to-end AWS cloud migration using S3, Lambda, and Aurora DB, transforming legacy systems into an automated data pipeline that processes over 100K medical records. Achieved 50% efficiency improvement by integrating NodeJS, Python, ExpressJS, Postman, and OAuth for secure and scalable backend operations."
       },
       {
         icon: Settings,

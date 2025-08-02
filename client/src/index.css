@@ -37,7 +37,7 @@
   --slate-900: hsl(222, 47%, 11%);
   --slate-950: hsl(229, 84%, 5%);
   
-  /* Vibrant Accent Colors */
+  /* Enhanced Vibrant Colors */
   --emerald-500: hsl(160, 84%, 39%);
   --emerald-600: hsl(158, 64%, 52%);
   --cyan-500: hsl(187, 85%, 53%);
@@ -48,6 +48,11 @@
   --rose-600: hsl(336, 84%, 57%);
   --amber-500: hsl(45, 93%, 58%);
   --orange-500: hsl(25, 95%, 58%);
+  --indigo-500: hsl(239, 84%, 67%);
+  --purple-500: hsl(283, 89%, 74%);
+  --pink-500: hsl(330, 81%, 70%);
+  --teal-500: hsl(173, 80%, 40%);
+  --lime-500: hsl(84, 81%, 44%);
 }
 
 .dark {
@@ -126,6 +131,14 @@
 
   .gradient-bg-secondary {
     background: linear-gradient(135deg, var(--rose-500) 0%, var(--amber-500) 50%, var(--orange-500) 100%);
+  }
+
+  .gradient-bg-tertiary {
+    background: linear-gradient(135deg, var(--purple-500) 0%, var(--pink-500) 50%, var(--indigo-500) 100%);
+  }
+
+  .gradient-bg-quaternary {
+    background: linear-gradient(135deg, var(--teal-500) 0%, var(--lime-500) 50%, var(--emerald-500) 100%);
   }
 
   .card-hover {
