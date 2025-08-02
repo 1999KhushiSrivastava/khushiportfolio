@@ -110,19 +110,7 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
-                  {!project.featured && (
-                    <div className="flex justify-center">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                        onClick={() => window.open(project.githubUrl, "_blank")}
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        GitHub
-                      </Button>
-                    </div>
-                  )}
+                  
                 </div>
               </div>
             );
