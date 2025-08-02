@@ -23,12 +23,12 @@ export function ExperienceSection() {
       {
         icon: Settings,
         title: "API Architecture",
-        description: "Architected enterprise-grade RESTful API infrastructure using AWS API Gateway and Cognito authentication, delivering secure microservices platform supporting 1,000+ concurrent healthcare professionals."
+        description: "Architected enterprise-grade RESTful API infrastructure using AWS API Gateway, Express.js, and Cognito authentication, delivering secure microservices platform supporting 1,000+ concurrent healthcare professionals. Utilized Postman for API testing and SQL for database optimization."
       },
       {
         icon: TrendingUp,
         title: "Cost Optimization",
-        description: "Spearheaded comprehensive data modeling strategy and ETL automation, resulting in 60% operational cost reduction while maintaining strict data integrity and HIPAA compliance."
+        description: "Spearheaded comprehensive data modeling strategy using Python and SQL for ETL automation, resulting in 60% operational cost reduction while maintaining strict data integrity and HIPAA compliance. Implemented secure authentication systems using OAuth protocols."
       },
       {
         icon: Shield,
@@ -36,7 +36,7 @@ export function ExperienceSection() {
         description: "Implemented robust security measures throughout the architecture, ensuring end-to-end encryption, role-based access control, and continuous compliance monitoring."
       }
     ],
-    technologies: ["Node.js", "TypeScript", "AWS", "API Gateway", "Lambda", "Aurora RDS", "HIPAA Compliance"]
+    technologies: ["Node.js", "TypeScript", "Python", "Express.js", "AWS", "API Gateway", "Lambda", "Aurora RDS", "SQL", "Postman", "OAuth", "HIPAA Compliance"]
   };
 
   const trainingExperience = {
@@ -61,7 +61,7 @@ export function ExperienceSection() {
         description: "Experienced in designing and implementing RESTful APIs with secure authentication (JWT, OAuth), tailored for diverse use cases including user management, data processing, and third-party integrations."
       }
     ],
-    technologies: ["Node.js", "Express.js", "TypeScript", "MongoDB", "AWS S3", "Redis", "JWT", "OAuth"]
+    technologies: ["Node.js", "Express.js", "TypeScript", "MongoDB", "AWS S3", "Redis", "JWT", "OAuth", "Postman", "SQL"]
   };
 
   const ExperienceCard = ({ experience }: { experience: typeof currentExperience }) => (

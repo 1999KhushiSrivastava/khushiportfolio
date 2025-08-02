@@ -15,6 +15,8 @@ export function ProjectsSection() {
       ],
       technologies: ["JavaScript", "Node.js", "MongoDB", "AWS S3"],
       featured: true,
+      githubUrl: "https://github.com/khushi-srivastava/e-commerce-project",
+      liveUrl: "#"
     },
     {
       title: "Comprehensive Author and Book Management System",
@@ -28,6 +30,8 @@ export function ProjectsSection() {
       ],
       technologies: ["TypeScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "REST API", "MVC Architecture"],
       featured: false,
+      githubUrl: "https://github.com/khushi-srivastava/book-management-system",
+      liveUrl: "#"
     },
     {
       title: "Open to Intern Platform",
@@ -41,6 +45,8 @@ export function ProjectsSection() {
       ],
       technologies: ["JavaScript", "Node.js", "MongoDB", "AWS S3"],
       featured: false,
+      githubUrl: "https://github.com/khushi-srivastava/open-to-intern",
+      liveUrl: "#"
     },
   ];
 
@@ -109,7 +115,7 @@ export function ProjectsSection() {
                       variant="default"
                       size="sm"
                       className="flex-1 bg-primary hover:bg-primary/90"
-                      onClick={() => window.open("#", "_blank")}
+                      onClick={() => window.open(project.liveUrl, "_blank")}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
@@ -118,7 +124,7 @@ export function ProjectsSection() {
                       variant="outline"
                       size="sm"
                       className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      onClick={() => window.open("https://github.com/khushi-srivastava", "_blank")}
+                      onClick={() => window.open(project.githubUrl, "_blank")}
                     >
                       <Github className="mr-2 h-4 w-4" />
                       GitHub
