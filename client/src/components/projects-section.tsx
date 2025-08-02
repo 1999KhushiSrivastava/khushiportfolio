@@ -111,20 +111,11 @@ export function ProjectsSection() {
                   </div>
 
                   {!project.featured && (
-                    <div className="flex space-x-3">
-                      <Button
-                        variant="default"
-                        size="sm"
-                        className="flex-1 bg-primary hover:bg-primary/90"
-                        onClick={() => window.open(project.liveUrl, "_blank")}
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
+                    <div className="flex justify-center">
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                         onClick={() => window.open(project.githubUrl, "_blank")}
                       >
                         <Github className="mr-2 h-4 w-4" />
